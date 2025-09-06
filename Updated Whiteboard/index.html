@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Handwriting Board</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="app-header">
+    <h1>Handwriting Board</h1>
+    <nav class="toolbar" aria-label="Drawing toolbar">
+      <div class="tool-group">
+        <label>
+          <input type="radio" name="tool" value="pen" id="tool-pen" checked>
+          Pen
+        </label>
+        <label>
+          <input type="radio" name="tool" value="eraser" id="tool-eraser">
+          Eraser
+        </label>
+      </div>
+
+      <div class="tool-group">
+        <label for="color">Color</label>
+        <input type="color" id="color" value="#000000">
+      </div>
+
+      <div class="tool-group">
+        <label for="bgColor">Background</label>
+        <input type="color" id="bgColor" value="#1d2230">
+      </div>
+
+      <div class="tool-group">
+        <label for="size">Size</label>
+        <input type="range" id="size" min="1" max="50" value="4">
+        <span id="sizeVal" aria-live="polite">4 px</span>
+      </div>
+
+      <div class="tool-group">
+        <button id="undo" title="Undo (Ctrl+Z)">Undo</button>
+        <button id="redo" title="Redo (Ctrl+Y / Ctrl+Shift+Z)">Redo</button>
+        <button id="clear" title="Clear">Clear</button>
+      </div>
+
+      <div class="tool-group">
+        <button id="savePng">Save PNG</button>
+        <button id="saveSvg">Save SVG</button>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <div id="board-container">
+      <canvas id="board" aria-label="Drawing canvas"></canvas>
+    </div>
+  </main>
+
+  <footer class="app-footer">
+    <span class="tip">Supports mouse, touch, and pen pressure (Pointer Events).</span>
+    <span class="spacer"></span>
+    <a href="#" id="ossLink" target="_blank" rel="noopener noreferrer">Open Source (MIT)</a>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
