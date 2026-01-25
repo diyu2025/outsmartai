@@ -1,0 +1,1023 @@
+{
+  "image": "/Users/yud/repo/outsmartai/backend/tests/data/CorrectSolution2.png",
+  "score": 100,
+  "max_score": 100,
+  "formalgeo_used": true,
+  "analysis": {
+    "text_description": "Problem:\nProve that angle C is a right angle\nGiven: Line AB is the diameter of the circle and point C is a point on the circle in between point A and point B\nPoint O is the center point of the circle\n\n(Printed on diagram: A, B, C, O, diameter)\n\nSolution Below:\nOA = OC = OB\nTriangle AOC and Triangle BOC are both isosceles triangles so\n∠OAC = ∠OCA and\n∠OBC = ∠OCB;\n∠OCA = x = ∠OAC, ∠OCB = y = ∠OBC\n∠ACB = ∠ACO + ∠OCB = x + y\n∠OAC = ∠BAC, ∠OBC = ∠CBA\n∠ACB + ∠BAC + ∠CBA = 180°\n∠ACB + ∠OAC + ∠OBC = 180°\n(x + y) + x + y = 180°\nx + y = 90°\n∠ACB = 90° and is right angle",
+    "drawing_description": "A circle with diameter AB drawn horizontally. Point O is the center on AB. Point C is on the upper arc of the circle. Chords AC and BC are drawn forming triangle ACB. Segments OA, OB, and OC are drawn; OC is a radius up to C. Tick marks indicate OA = OB (and implied radii). Angle markings: at A, angle between OA (along AB) and AC labeled x; at B, angle between OB (along BA) and BC labeled y; at C, the angle is split by OC into two angles labeled x (between CA and CO) and y (between CO and CB). Radii are labeled r on OA/OB/OC.",
+    "steps": [
+      "OA = OC = OB",
+      "Triangle AOC and Triangle BOC are both isosceles triangles so ∠OAC = ∠OCA and ∠OBC = ∠OCB",
+      "∠OCA = x = ∠OAC, ∠OCB = y = ∠OBC",
+      "∠ACB = ∠ACO + ∠OCB = x + y",
+      "∠OAC = ∠BAC, ∠OBC = ∠CBA",
+      "∠ACB + ∠BAC + ∠CBA = 180°",
+      "∠ACB + ∠OAC + ∠OBC = 180°",
+      "(x + y) + x + y = 180°",
+      "x + y = 90°",
+      "∠ACB = 90° and is right angle"
+    ],
+    "total_points": 90,
+    "deductions": [
+      {
+        "deducted_points": 10,
+        "deduction_reason": "Step '∠OAC = ∠BAC, ∠OBC = ∠CBA' is not justified: ∠OAC is the angle between OA and AC, while ∠BAC is between BA and AC. Since OA and BA are opposite rays on the same line AB, ∠OAC and ∠BAC are supplementary, not equal (similarly for ∠OBC and ∠CBA). The later substitution happens to still lead to the correct result, but this equality statement is incorrect.",
+        "deduction_confidence_score": 0.9,
+        "deduction_step": "∠OAC = ∠BAC, ∠OBC = ∠CBA"
+      }
+    ],
+    "confidence_score": 0.88,
+    "summary": "The student correctly uses isosceles triangles AOC and BOC to set ∠OAC = ∠OCA = x and ∠OBC = ∠OCB = y, and correctly decomposes ∠ACB into x + y using the radius OC. However, they incorrectly claim ∠OAC = ∠BAC and ∠OBC = ∠CBA (these are supplementary, not equal). Despite that misstatement, the core angle-sum argument still reaches the correct conclusion that ∠ACB = 90°."
+  },
+  "grading": {
+    "problem_id": "diameter_right_angle",
+    "steps": [
+      {
+        "step_id": 1,
+        "raw_text": "OA = OC = OB",
+        "normalized_text": "OA = OC = OB",
+        "tokens": [
+          "OA",
+          "=",
+          "OC",
+          "=",
+          "OB"
+        ],
+        "span_refs": [
+          {
+            "source": "student_text",
+            "start": 0,
+            "end": 12
+          }
+        ]
+      },
+      {
+        "step_id": 2,
+        "raw_text": "Triangle AOC and Triangle BOC are both isosceles triangles so",
+        "normalized_text": "Triangles AOC and BOC are isosceles, so",
+        "tokens": [
+          "Triangle",
+          "AOC",
+          "and",
+          "Triangle",
+          "BOC",
+          "are",
+          "both",
+          "isosceles",
+          "triangles",
+          "so"
+        ],
+        "span_refs": [
+          {
+            "source": "student_text",
+            "start": 13,
+            "end": 70
+          }
+        ]
+      },
+      {
+        "step_id": 3,
+        "raw_text": "∠OAC = ∠OCA and",
+        "normalized_text": "∠OAC = ∠OCA",
+        "tokens": [
+          "∠OAC",
+          "=",
+          "∠OCA"
+        ],
+        "span_refs": [
+          {
+            "source": "student_text",
+            "start": 71,
+            "end": 86
+          }
+        ]
+      },
+      {
+        "step_id": 4,
+        "raw_text": "∠OBC = ∠OCB;",
+        "normalized_text": "∠OBC = ∠OCB",
+        "tokens": [
+          "∠OBC",
+          "=",
+          "∠OCB"
+        ],
+        "span_refs": [
+          {
+            "source": "student_text",
+            "start": 87,
+            "end": 102
+          }
+        ]
+      },
+      {
+        "step_id": 5,
+        "raw_text": "∠OCA = x = ∠OAC, ∠OCB = y = ∠OBC",
+        "normalized_text": "∠OCA = x = ∠OAC, and ∠OCB = y = ∠OBC",
+        "tokens": [
+          "∠OCA",
+          "=",
+          "x",
+          "=",
+          "∠OAC",
+          ",",
+          "∠OCB",
+          "=",
+          "y",
+          "=",
+          "∠OBC"
+        ],
+        "span_refs": [
+          {
+            "source": "student_text",
+            "start": 103,
+            "end": 144
+          }
+        ]
+      },
+      {
+        "step_id": 6,
+        "raw_text": "∠ACB = ∠ACO + ∠OCB = x + y",
+        "normalized_text": "∠ACB = ∠ACO + ∠OCB = x + y",
+        "tokens": [
+          "∠ACB",
+          "=",
+          "∠ACO",
+          "+",
+          "∠OCB",
+          "=",
+          "x",
+          "+",
+          "y"
+        ],
+        "span_refs": [
+          {
+            "source": "student_text",
+            "start": 145,
+            "end": 175
+          }
+        ]
+      },
+      {
+        "step_id": 7,
+        "raw_text": "∠OAC = ∠BAC, ∠OBC = ∠CBA",
+        "normalized_text": "∠OAC = ∠BAC, and ∠OBC = ∠CBA",
+        "tokens": [
+          "∠OAC",
+          "=",
+          "∠BAC",
+          ",",
+          "∠OBC",
+          "=",
+          "∠CBA"
+        ],
+        "span_refs": [
+          {
+            "source": "student_text",
+            "start": 176,
+            "end": 204
+          }
+        ]
+      },
+      {
+        "step_id": 8,
+        "raw_text": "∠ACB + ∠BAC + ∠CBA = 180°",
+        "normalized_text": "∠ACB + ∠BAC + ∠CBA = 180°",
+        "tokens": [
+          "∠ACB",
+          "+",
+          "∠BAC",
+          "+",
+          "∠CBA",
+          "=",
+          "180°"
+        ],
+        "span_refs": [
+          {
+            "source": "student_text",
+            "start": 205,
+            "end": 233
+          }
+        ]
+      },
+      {
+        "step_id": 9,
+        "raw_text": "∠ACB + ∠OAC + ∠OBC = 180°",
+        "normalized_text": "∠ACB + ∠OAC + ∠OBC = 180°",
+        "tokens": [
+          "∠ACB",
+          "+",
+          "∠OAC",
+          "+",
+          "∠OBC",
+          "=",
+          "180°"
+        ],
+        "span_refs": [
+          {
+            "source": "student_text",
+            "start": 234,
+            "end": 262
+          }
+        ]
+      },
+      {
+        "step_id": 10,
+        "raw_text": "(x + y) + x + y = 180°",
+        "normalized_text": "(x + y) + x + y = 180°",
+        "tokens": [
+          "(",
+          "x",
+          "+",
+          "y",
+          ")",
+          "+",
+          "x",
+          "+",
+          "y",
+          "=",
+          "180°"
+        ],
+        "span_refs": [
+          {
+            "source": "student_text",
+            "start": 263,
+            "end": 284
+          }
+        ]
+      },
+      {
+        "step_id": 11,
+        "raw_text": "x + y = 90°",
+        "normalized_text": "x + y = 90°",
+        "tokens": [
+          "x",
+          "+",
+          "y",
+          "=",
+          "90°"
+        ],
+        "span_refs": [
+          {
+            "source": "student_text",
+            "start": 285,
+            "end": 295
+          }
+        ]
+      },
+      {
+        "step_id": 12,
+        "raw_text": "∠ACB = 90° and is right angle",
+        "normalized_text": "∠ACB = 90° and is a right angle",
+        "tokens": [
+          "∠ACB",
+          "=",
+          "90°",
+          "and",
+          "is",
+          "right",
+          "angle"
+        ],
+        "span_refs": [
+          {
+            "source": "student_text",
+            "start": 296,
+            "end": 324
+          }
+        ]
+      }
+    ],
+    "claims": [
+      {
+        "claim_id": "S1C1",
+        "type": "EQUAL_LENGTH",
+        "args": [
+          "OA",
+          "OC"
+        ],
+        "depends_on": [],
+        "evidence": {
+          "from_step": 1
+        },
+        "confidence_hint": "high",
+        "source": "student"
+      },
+      {
+        "claim_id": "S1C2",
+        "type": "EQUAL_LENGTH",
+        "args": [
+          "OC",
+          "OB"
+        ],
+        "depends_on": [],
+        "evidence": {
+          "from_step": 1
+        },
+        "confidence_hint": "high",
+        "source": "student"
+      },
+      {
+        "claim_id": "S2C1",
+        "type": "ISOSCELES",
+        "args": [
+          "AOC"
+        ],
+        "depends_on": [
+          "S1C1"
+        ],
+        "evidence": {
+          "from_step": 2
+        },
+        "confidence_hint": "medium",
+        "source": "student"
+      },
+      {
+        "claim_id": "S2C2",
+        "type": "ISOSCELES",
+        "args": [
+          "BOC"
+        ],
+        "depends_on": [
+          "S1C2"
+        ],
+        "evidence": {
+          "from_step": 2
+        },
+        "confidence_hint": "medium",
+        "source": "student"
+      },
+      {
+        "claim_id": "S3C1",
+        "type": "EQUAL_ANGLE",
+        "args": [
+          "∠OAC",
+          "∠OCA"
+        ],
+        "depends_on": [
+          "S2C1"
+        ],
+        "evidence": {
+          "from_step": 3
+        },
+        "confidence_hint": "high",
+        "source": "student"
+      },
+      {
+        "claim_id": "S4C1",
+        "type": "EQUAL_ANGLE",
+        "args": [
+          "∠OBC",
+          "∠OCB"
+        ],
+        "depends_on": [
+          "S2C2"
+        ],
+        "evidence": {
+          "from_step": 4
+        },
+        "confidence_hint": "high",
+        "source": "student"
+      },
+      {
+        "claim_id": "S5C1",
+        "type": "ANGLE_DEFINED_AS",
+        "args": [
+          "x",
+          "∠OCA"
+        ],
+        "depends_on": [],
+        "evidence": {
+          "from_step": 5
+        },
+        "confidence_hint": "high",
+        "source": "student"
+      },
+      {
+        "claim_id": "S5C2",
+        "type": "ANGLE_DEFINED_AS",
+        "args": [
+          "y",
+          "∠OCB"
+        ],
+        "depends_on": [],
+        "evidence": {
+          "from_step": 5
+        },
+        "confidence_hint": "high",
+        "source": "student"
+      },
+      {
+        "claim_id": "S5C3",
+        "type": "EQUAL_ANGLE",
+        "args": [
+          "∠OCA",
+          "∠OAC"
+        ],
+        "depends_on": [
+          "S3C1"
+        ],
+        "evidence": {
+          "from_step": 5
+        },
+        "confidence_hint": "high",
+        "source": "student"
+      },
+      {
+        "claim_id": "S5C4",
+        "type": "EQUAL_ANGLE",
+        "args": [
+          "∠OCB",
+          "∠OBC"
+        ],
+        "depends_on": [
+          "S4C1"
+        ],
+        "evidence": {
+          "from_step": 5
+        },
+        "confidence_hint": "high",
+        "source": "student"
+      },
+      {
+        "claim_id": "S6C1",
+        "type": "ANGLE_ADDITION",
+        "args": [
+          "∠ACB",
+          "∠ACO",
+          "∠OCB"
+        ],
+        "depends_on": [
+          "D4"
+        ],
+        "evidence": {
+          "from_step": 6
+        },
+        "confidence_hint": "medium",
+        "source": "student"
+      },
+      {
+        "claim_id": "S6C2",
+        "type": "ANGLE_MEASURE_SUM",
+        "args": [
+          "m∠ACB",
+          "x+y"
+        ],
+        "depends_on": [
+          "S6C1",
+          "S5C1",
+          "S5C2"
+        ],
+        "evidence": {
+          "from_step": 6
+        },
+        "confidence_hint": "medium",
+        "source": "student"
+      },
+      {
+        "claim_id": "S7C1",
+        "type": "EQUAL_ANGLE",
+        "args": [
+          "∠OAC",
+          "∠BAC"
+        ],
+        "depends_on": [
+          "D1"
+        ],
+        "evidence": {
+          "from_step": 7
+        },
+        "confidence_hint": "medium",
+        "source": "student"
+      },
+      {
+        "claim_id": "S7C2",
+        "type": "EQUAL_ANGLE",
+        "args": [
+          "∠OBC",
+          "∠CBA"
+        ],
+        "depends_on": [
+          "D1"
+        ],
+        "evidence": {
+          "from_step": 7
+        },
+        "confidence_hint": "medium",
+        "source": "student"
+      },
+      {
+        "claim_id": "S8C1",
+        "type": "TRIANGLE_ANGLE_SUM_180",
+        "args": [
+          "A",
+          "C",
+          "B"
+        ],
+        "depends_on": [],
+        "evidence": {
+          "from_step": 8
+        },
+        "confidence_hint": "high",
+        "source": "student"
+      },
+      {
+        "claim_id": "S9C1",
+        "type": "ANGLE_SUM_EQUATION",
+        "args": [
+          "m∠ACB + m∠OAC + m∠OBC = 180°"
+        ],
+        "depends_on": [
+          "S8C1",
+          "S7C1",
+          "S7C2"
+        ],
+        "evidence": {
+          "from_step": 9
+        },
+        "confidence_hint": "medium",
+        "source": "student"
+      },
+      {
+        "claim_id": "S10C1",
+        "type": "SUBSTITUTION_IN_EQUATION",
+        "args": [
+          "m∠ACB + m∠OAC + m∠OBC = 180°",
+          "m∠ACB = x+y",
+          "m∠OAC = x",
+          "m∠OBC = y",
+          "(x+y)+x+y=180°"
+        ],
+        "depends_on": [
+          "S9C1",
+          "S6C2",
+          "S5C1",
+          "S5C2",
+          "S5C3",
+          "S5C4"
+        ],
+        "evidence": {
+          "from_step": 10
+        },
+        "confidence_hint": "medium",
+        "source": "student"
+      },
+      {
+        "claim_id": "S11C1",
+        "type": "ALGEBRA_SIMPLIFY",
+        "args": [
+          "(x+y)+x+y=180°",
+          "x+y=90°"
+        ],
+        "depends_on": [
+          "S10C1"
+        ],
+        "evidence": {
+          "from_step": 11
+        },
+        "confidence_hint": "high",
+        "source": "student"
+      },
+      {
+        "claim_id": "S12C1",
+        "type": "ANGLE_MEASURE",
+        "args": [
+          "∠ACB",
+          "90°"
+        ],
+        "depends_on": [
+          "S6C2",
+          "S11C1"
+        ],
+        "evidence": {
+          "from_step": 12
+        },
+        "confidence_hint": "medium",
+        "source": "student"
+      },
+      {
+        "claim_id": "S12C2",
+        "type": "RIGHT_ANGLE",
+        "args": [
+          "∠ACB"
+        ],
+        "depends_on": [
+          "S12C1"
+        ],
+        "evidence": {
+          "from_step": 12
+        },
+        "confidence_hint": "high",
+        "source": "student"
+      }
+    ],
+    "givens": [
+      {
+        "claim_id": "G1",
+        "type": "DIAMETER",
+        "args": [
+          "AB"
+        ],
+        "depends_on": [],
+        "evidence": {
+          "source": "problem"
+        },
+        "confidence_hint": "high",
+        "source": "problem"
+      },
+      {
+        "claim_id": "G2",
+        "type": "CENTER",
+        "args": [
+          "O"
+        ],
+        "depends_on": [],
+        "evidence": {
+          "source": "problem"
+        },
+        "confidence_hint": "high",
+        "source": "problem"
+      },
+      {
+        "claim_id": "G3",
+        "type": "POINT_ON_CIRCLE",
+        "args": [
+          "C"
+        ],
+        "depends_on": [],
+        "evidence": {
+          "source": "problem"
+        },
+        "confidence_hint": "high",
+        "source": "problem"
+      }
+    ],
+    "student_diagram_claims": [
+      {
+        "claim_id": "D1",
+        "type": "COLLINEAR",
+        "args": [
+          "A",
+          "O",
+          "B"
+        ],
+        "depends_on": [
+          "G1",
+          "G2"
+        ],
+        "evidence": {},
+        "confidence_hint": "low",
+        "source": "student_diagram"
+      },
+      {
+        "claim_id": "D2",
+        "type": "SEGMENT_DRAWN",
+        "args": [
+          "AC"
+        ],
+        "depends_on": [],
+        "evidence": {},
+        "confidence_hint": "low",
+        "source": "student_diagram"
+      },
+      {
+        "claim_id": "D3",
+        "type": "SEGMENT_DRAWN",
+        "args": [
+          "BC"
+        ],
+        "depends_on": [],
+        "evidence": {},
+        "confidence_hint": "low",
+        "source": "student_diagram"
+      },
+      {
+        "claim_id": "D4",
+        "type": "SEGMENT_DRAWN",
+        "args": [
+          "OC"
+        ],
+        "depends_on": [],
+        "evidence": {},
+        "confidence_hint": "low",
+        "source": "student_diagram"
+      },
+      {
+        "claim_id": "D5",
+        "type": "SEGMENT_DRAWN",
+        "args": [
+          "OA"
+        ],
+        "depends_on": [],
+        "evidence": {},
+        "confidence_hint": "low",
+        "source": "student_diagram"
+      },
+      {
+        "claim_id": "D6",
+        "type": "SEGMENT_DRAWN",
+        "args": [
+          "OB"
+        ],
+        "depends_on": [],
+        "evidence": {},
+        "confidence_hint": "low",
+        "source": "student_diagram"
+      }
+    ],
+    "verification_results": [
+      {
+        "claim_id": "S1C1",
+        "verdict": "true",
+        "reason_code": "FORMALGEO_VERIFIED",
+        "missing": [],
+        "used_facts": [],
+        "proof_trace": [
+          "algebraic_constraint"
+        ],
+        "evidence_strength": "strong"
+      },
+      {
+        "claim_id": "S1C2",
+        "verdict": "true",
+        "reason_code": "FORMALGEO_VERIFIED",
+        "missing": [],
+        "used_facts": [],
+        "proof_trace": [
+          "algebraic_constraint"
+        ],
+        "evidence_strength": "strong"
+      },
+      {
+        "claim_id": "S2C1",
+        "verdict": "true",
+        "reason_code": "FORMALGEO_VERIFIED",
+        "missing": [],
+        "used_facts": [],
+        "proof_trace": [],
+        "evidence_strength": "strong"
+      },
+      {
+        "claim_id": "S2C2",
+        "verdict": "true",
+        "reason_code": "FORMALGEO_VERIFIED",
+        "missing": [],
+        "used_facts": [],
+        "proof_trace": [],
+        "evidence_strength": "strong"
+      },
+      {
+        "claim_id": "S3C1",
+        "verdict": "true",
+        "reason_code": "FORMALGEO_VERIFIED",
+        "missing": [],
+        "used_facts": [],
+        "proof_trace": [
+          "algebraic_constraint"
+        ],
+        "evidence_strength": "strong"
+      },
+      {
+        "claim_id": "S4C1",
+        "verdict": "true",
+        "reason_code": "FORMALGEO_VERIFIED",
+        "missing": [],
+        "used_facts": [],
+        "proof_trace": [
+          "algebraic_constraint"
+        ],
+        "evidence_strength": "strong"
+      },
+      {
+        "claim_id": "S5C1",
+        "verdict": "true",
+        "reason_code": "FORMALGEO_VERIFIED",
+        "missing": [],
+        "used_facts": [],
+        "proof_trace": [
+          "algebraic_constraint"
+        ],
+        "evidence_strength": "strong"
+      },
+      {
+        "claim_id": "S5C2",
+        "verdict": "true",
+        "reason_code": "FORMALGEO_VERIFIED",
+        "missing": [],
+        "used_facts": [],
+        "proof_trace": [
+          "algebraic_constraint"
+        ],
+        "evidence_strength": "strong"
+      },
+      {
+        "claim_id": "S5C3",
+        "verdict": "true",
+        "reason_code": "FORMALGEO_VERIFIED",
+        "missing": [],
+        "used_facts": [],
+        "proof_trace": [
+          "algebraic_constraint"
+        ],
+        "evidence_strength": "strong"
+      },
+      {
+        "claim_id": "S5C4",
+        "verdict": "true",
+        "reason_code": "FORMALGEO_VERIFIED",
+        "missing": [],
+        "used_facts": [],
+        "proof_trace": [
+          "algebraic_constraint"
+        ],
+        "evidence_strength": "strong"
+      },
+      {
+        "claim_id": "S6C1",
+        "verdict": "true",
+        "reason_code": "FORMALGEO_VERIFIED",
+        "missing": [],
+        "used_facts": [],
+        "proof_trace": [
+          "algebraic_constraint"
+        ],
+        "evidence_strength": "strong"
+      }
+    ],
+    "rubric_scores": [],
+    "score_total": 100,
+    "score_max": 100,
+    "referee": {
+      "referee_needed": false,
+      "notes": "Using FormalGeo grading",
+      "unknown_claim_ids": []
+    },
+    "symbols_map": {
+      "OA": [
+        1
+      ],
+      "OC": [
+        1
+      ],
+      "OB": [
+        1
+      ],
+      "Triangle": [
+        2
+      ],
+      "AOC": [
+        2
+      ],
+      "BOC": [
+        2
+      ],
+      "isosceles": [
+        2
+      ],
+      "∠OAC": [
+        3,
+        5,
+        7,
+        9
+      ],
+      "∠OCA": [
+        3,
+        5
+      ],
+      "∠OBC": [
+        4,
+        5,
+        7,
+        9
+      ],
+      "∠OCB": [
+        4,
+        5,
+        6
+      ],
+      "x": [
+        5,
+        6,
+        10,
+        11
+      ],
+      "y": [
+        5,
+        6,
+        10,
+        11
+      ],
+      "∠ACB": [
+        6,
+        8,
+        9,
+        12
+      ],
+      "∠ACO": [
+        6
+      ],
+      "∠BAC": [
+        7,
+        8
+      ],
+      "∠CBA": [
+        7,
+        8
+      ],
+      "180°": [
+        8,
+        9,
+        10
+      ],
+      "90°": [
+        11,
+        12
+      ]
+    },
+    "formalgeo_used": true,
+    "formalgeo_grading": {
+      "total_points": 100,
+      "deductions": [],
+      "step_feedback": [
+        {
+          "step_id": 1,
+          "is_valid": true,
+          "note": "Step is correct",
+          "theorem_applied": "algebraic_constraint",
+          "confidence": 0.75
+        },
+        {
+          "step_id": 2,
+          "is_valid": true,
+          "note": "Step is correct",
+          "theorem_applied": "algebraic_constraint",
+          "confidence": 0.75
+        },
+        {
+          "step_id": 3,
+          "is_valid": true,
+          "note": "Step is correct",
+          "confidence": 0.9
+        },
+        {
+          "step_id": 4,
+          "is_valid": true,
+          "note": "Step is correct",
+          "confidence": 0.9
+        },
+        {
+          "step_id": 5,
+          "is_valid": true,
+          "note": "Step is correct",
+          "theorem_applied": "algebraic_constraint",
+          "confidence": 0.75
+        },
+        {
+          "step_id": 6,
+          "is_valid": true,
+          "note": "Step is correct",
+          "theorem_applied": "algebraic_constraint",
+          "confidence": 0.75
+        },
+        {
+          "step_id": 7,
+          "is_valid": true,
+          "note": "Step is correct",
+          "theorem_applied": "algebraic_constraint",
+          "confidence": 0.75
+        },
+        {
+          "step_id": 8,
+          "is_valid": true,
+          "note": "Step is correct",
+          "theorem_applied": "algebraic_constraint",
+          "confidence": 0.75
+        },
+        {
+          "step_id": 9,
+          "is_valid": true,
+          "note": "Step is correct",
+          "theorem_applied": "algebraic_constraint",
+          "confidence": 0.75
+        },
+        {
+          "step_id": 10,
+          "is_valid": true,
+          "note": "Step is correct",
+          "theorem_applied": "algebraic_constraint",
+          "confidence": 0.75
+        },
+        {
+          "step_id": 11,
+          "is_valid": true,
+          "note": "Step is correct",
+          "theorem_applied": "algebraic_constraint",
+          "confidence": 0.75
+        }
+      ],
+      "missing_steps": [],
+      "goal_reached": true,
+      "confidence": 0.7772727272727273,
+      "summary": "Student demonstrated complete understanding and correctly solved the problem."
+    }
+  }
+}

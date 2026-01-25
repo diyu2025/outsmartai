@@ -26,7 +26,8 @@ def _get_test_image_bytes() -> bytes:
     
     # env_path = r"C:\Users\georg\repo\outsmartai\backend\tests\data\CorrectSolution1.png"
     # env_path = r"C:\Users\georg\repo\outsmartai\backend\tests\data\WrongSolution1.png"
-    env_path = r"C:\Users\georg\repo\outsmartai\backend\tests\data\CorrectSolution2.png"
+    # env_path = r"C:\Users\georg\repo\outsmartai\backend\tests\data\CorrectSolution2.png"
+    env_path = r"/Users/yud/repo/outsmartai/backend/tests/data/CorrectSolution2.png"
     if env_path:
         fixture_path = Path(env_path).expanduser()
         if fixture_path.exists():
